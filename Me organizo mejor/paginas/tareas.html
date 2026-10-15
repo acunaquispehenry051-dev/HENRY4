@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis tareas | Me organizo mejor</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../css/paginas.css">
+    <script src="../js/paginas.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <a href="../index.html" class="logo">📚 Me organizo mejor</a>
+    <p>Organiza tus trabajos y fechas de entrega</p>
+</header>
+
+<nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="tareas.html">Mis tareas</a>
+    <a href="horario.html">Mi horario</a>
+    <a href="consejos.html">Consejos</a>
+    <a href="objetivos.html">Mis objetivos</a>
+</nav>
+
+<main class="contenedor pagina-contenido">
+
+    <section class="cabecera-pagina">
+        <span class="etiqueta">ORGANIZACIÓN ACADÉMICA</span>
+        <h1>📝 Mis tareas</h1>
+        <p>Registra tus trabajos y lleva el control de tus entregas.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Agregar una nueva tarea</h2>
+
+        <form id="formulario-tarea" class="formulario">
+
+            <div class="campo">
+                <label for="nombre-tarea">Nombre de la tarea</label>
+                <input
+                    type="text"
+                    id="nombre-tarea"
+                    placeholder="Ej. Resolver ejercicios de matemáticas"
+                    maxlength="150"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="materia-tarea">Materia</label>
+                <select id="materia-tarea" required>
+                    <option value="">Selecciona una materia</option>
+                    <option>Matemáticas</option>
+                    <option>Lenguaje</option>
+                    <option>Sociales</option>
+                    <option>Ciencias Naturales</option>
+                    <option>Inglés</option>
+                    <option>Informática</option>
+                    <option>Otra</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="fecha-tarea">Fecha de entrega</label>
+                <input type="date" id="fecha-tarea" required>
+            </div>
+
+            <button class="boton" type="submit">➕ Agregar tarea</button>
+
+        </form>
+    </section>
+
+    <section class="estadisticas">
+        <article class="estadistica">
+            <span>Pendientes</span>
+            <strong id="total-pendientes">0</strong>
+        </article>
+
+        <article class="estadistica">
+            <span>Completadas</span>
+            <strong id="total-completadas">0</strong>
+        </article>
+    </section>
+
+    <section class="panel">
+        <div class="titulo-lista">
+            <h2>Mi lista de tareas</h2>
+
+            <select id="filtro-tareas" aria-label="Filtrar tareas">
+                <option value="todas">Todas las tareas</option>
+                <option value="pendientes">Pendientes</option>
+                <option value="completadas">Completadas</option>
+            </select>
+        </div>
+
+        <div id="lista-tareas">
+            <p class="mensaje-vacio">Cargando tareas...</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pie">
+    <strong>📚 Me organizo mejor</strong>
+    <p>Organiza tu tiempo, construye tu futuro.</p>
+</footer>
+
+</body>
+</html>

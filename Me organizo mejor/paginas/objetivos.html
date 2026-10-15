@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis objetivos | Me organizo mejor</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../css/paginas.css">
+    <script src="../js/paginas.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <a href="../index.html" class="logo">📚 Me organizo mejor</a>
+    <p>Define tus metas y registra tus avances</p>
+</header>
+
+<nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="tareas.html">Mis tareas</a>
+    <a href="horario.html">Mi horario</a>
+    <a href="consejos.html">Consejos</a>
+    <a href="objetivos.html">Mis objetivos</a>
+</nav>
+
+<main class="contenedor pagina-contenido">
+
+    <section class="cabecera-pagina">
+        <span class="etiqueta">CRECIMIENTO ACADÉMICO</span>
+        <h1>🎯 Mis objetivos</h1>
+        <p>Establece metas que te ayuden a avanzar en tus estudios.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Registrar un objetivo</h2>
+
+        <form id="formulario-objetivo" class="formulario">
+
+            <div class="campo">
+                <label for="nombre-objetivo">¿Qué quieres lograr?</label>
+                <input
+                    type="text"
+                    id="nombre-objetivo"
+                    placeholder="Ej. Mejorar en matemáticas"
+                    maxlength="150"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="fecha-objetivo">Fecha objetivo (opcional)</label>
+                <input type="date" id="fecha-objetivo">
+            </div>
+
+            <button type="submit" class="boton">➕ Agregar objetivo</button>
+
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Mi lista de objetivos</h2>
+
+        <div id="lista-objetivos">
+            <p class="mensaje-vacio">Cargando objetivos...</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pie">
+    <strong>📚 Me organizo mejor</strong>
+    <p>Organiza tu tiempo, construye tu futuro.</p>
+</footer>
+
+</body>
+</html>

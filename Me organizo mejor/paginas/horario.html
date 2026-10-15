@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi horario | Me organizo mejor</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../css/paginas.css">
+    <script src="../js/paginas.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <a href="../index.html" class="logo">📚 Me organizo mejor</a>
+    <p>Distribuye tu tiempo de estudio</p>
+</header>
+
+<nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="tareas.html">Mis tareas</a>
+    <a href="horario.html">Mi horario</a>
+    <a href="consejos.html">Consejos</a>
+    <a href="objetivos.html">Mis objetivos</a>
+</nav>
+
+<main class="contenedor pagina-contenido">
+
+    <section class="cabecera-pagina">
+        <span class="etiqueta">PLANIFICACIÓN</span>
+        <h1>🕒 Mi horario de estudio</h1>
+        <p>Organiza tus actividades y reserva tiempo para estudiar y descansar.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Agregar una actividad</h2>
+
+        <form id="formulario-horario" class="formulario">
+
+            <div class="campo">
+                <label for="actividad-horario">Actividad</label>
+                <input
+                    type="text"
+                    id="actividad-horario"
+                    placeholder="Ej. Estudiar matemáticas"
+                    maxlength="120"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="dia-horario">Día</label>
+                <select id="dia-horario" required>
+                    <option value="">Selecciona un día</option>
+                    <option>Lunes</option>
+                    <option>Martes</option>
+                    <option>Miércoles</option>
+                    <option>Jueves</option>
+                    <option>Viernes</option>
+                    <option>Sábado</option>
+                    <option>Domingo</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="hora-inicio">Hora de inicio</label>
+                <input type="time" id="hora-inicio" required>
+            </div>
+
+            <div class="campo">
+                <label for="hora-fin">Hora de finalización</label>
+                <input type="time" id="hora-fin" required>
+            </div>
+
+            <button type="submit" class="boton">➕ Agregar al horario</button>
+
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>📆 Mi planificación semanal</h2>
+
+        <div id="lista-horario">
+            <p class="mensaje-vacio">Cargando horario...</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pie">
+    <strong>📚 Me organizo mejor</strong>
+    <p>Organiza tu tiempo, construye tu futuro.</p>
+</footer>
+
+</body>
+</html>

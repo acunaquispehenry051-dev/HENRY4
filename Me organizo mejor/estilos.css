@@ -1,0 +1,389 @@
+/* =================================
+   ME ORGANIZO MEJOR
+   DISEÑO GENERAL
+================================= */
+
+:root {
+    --azul: #3157d5;
+    --azul-oscuro: #203fa8;
+    --fondo: #f5f7fc;
+    --texto: #202b45;
+    --texto-suave: #69758b;
+    --blanco: #ffffff;
+    --borde: #e6eaf2;
+    --radio: 18px;
+    --sombra: 0 8px 28px rgba(37, 55, 100, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    text-align: center;
+    padding: 30px 20px 24px;
+    background: var(--blanco);
+}
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--azul);
+    margin-bottom: 5px;
+}
+
+.encabezado p {
+    color: var(--texto-suave);
+}
+
+/* MENÚ */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    background: var(--blanco);
+    border-top: 1px solid var(--borde);
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--texto-suave);
+    transition: 0.2s;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background: #edf1ff;
+    color: var(--azul);
+}
+
+/* CONTENEDOR */
+
+.contenedor {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+/* BIENVENIDA */
+
+.bienvenida {
+    text-align: center;
+    padding: 75px 20px 55px;
+}
+
+.etiqueta,
+.titulo-seccion > span,
+.objetivo-dia > div > span {
+    display: inline-block;
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.bienvenida h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+.bienvenida > p {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    color: var(--texto-suave);
+    font-size: 17px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--azul);
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 13px 23px;
+    border-radius: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background: var(--azul-oscuro);
+    transform: translateY(-2px);
+}
+
+/* RESUMEN */
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 75px;
+}
+
+.resumen-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 23px;
+    box-shadow: var(--sombra);
+}
+
+.resumen-card > span {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: #edf1ff;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.resumen-card p {
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.resumen-card strong {
+    display: block;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+/* SECCIONES */
+
+.seccion {
+    margin-bottom: 75px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion h2 {
+    font-size: clamp(25px, 4vw, 35px);
+    margin-bottom: 10px;
+}
+
+.titulo-seccion p {
+    color: var(--texto-suave);
+}
+
+/* TARJETAS */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    padding: 30px;
+    border-radius: var(--radio);
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(37, 55, 100, 0.11);
+}
+
+.icono {
+    display: grid;
+    place-items: center;
+    width: 57px;
+    height: 57px;
+    border-radius: 16px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.tarjeta > p {
+    color: var(--texto-suave);
+    margin-bottom: 22px;
+}
+
+.tarjeta-azul .icono {
+    background: #e7edff;
+}
+
+.tarjeta-verde .icono {
+    background: #ddf8e9;
+}
+
+.tarjeta-amarilla .icono {
+    background: #fff2cc;
+}
+
+.tarjeta-morada .icono {
+    background: #f0e5ff;
+}
+
+.enlace-tarjeta {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 800;
+}
+
+.enlace-tarjeta:hover {
+    text-decoration: underline;
+}
+
+/* OBJETIVO DEL DÍA */
+
+.objetivo-dia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 38px;
+    margin-bottom: 65px;
+    background: #263f9e;
+    color: white;
+    border-radius: 23px;
+}
+
+.objetivo-dia > div > span {
+    color: #c7d2fe;
+}
+
+.objetivo-dia h2 {
+    font-size: clamp(23px, 3vw, 32px);
+    margin-bottom: 10px;
+}
+
+.objetivo-dia p {
+    color: #e0e7ff;
+}
+
+.boton-claro {
+    flex-shrink: 0;
+    background: white;
+    color: var(--azul-oscuro);
+}
+
+.boton-claro:hover {
+    background: #e9edff;
+    color: var(--azul-oscuro);
+}
+
+/* PIE DE PÁGINA */
+
+.pie {
+    text-align: center;
+    background: white;
+    border-top: 1px solid var(--borde);
+    padding: 30px 20px;
+}
+
+.pie strong {
+    color: var(--azul);
+}
+
+.pie p {
+    color: var(--texto-suave);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 750px) {
+    .resumen {
+        grid-template-columns: 1fr;
+        margin-bottom: 55px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .bienvenida {
+        padding: 55px 5px 40px;
+    }
+
+    .objetivo-dia {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 27px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .menu {
+        gap: 4px;
+    }
+
+    .menu a {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .contenedor {
+        width: 94%;
+    }
+
+    .tarjeta {
+        padding: 22px;
+    }
+}
